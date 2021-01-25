@@ -1,7 +1,7 @@
 .example-card {
     max-width: 400px;
-    margin-left: 36rem;
-    margin-top: 9rem;
+    margin-left: 34rem;
+    margin-top: 11rem;
 }
   
   
@@ -38,3 +38,10 @@
     color:green;
    
     }
+    .csdmd{
+      min-width: 100%;
+      padding: 60px 1rem;
+      display: block;
+      background: #0275d8;
+   
+  }

@@ -1,0 +1,32 @@
+.header{
+    width: 100%;
+    background-color: #b3dbff;
+    justify-content: left;
+    color: #0275d8;
+  }
+  .createe{
+    /* margin-left: 4rem; */
+    text-align: center;
+
+  }
+  .example-full-width {
+    width: 100%;
+  }
+  .loginerror{
+   
+    margin-left: 66rem;
+    margin-top: 12rem;
+   }
+   .loginerror1{
+     
+    margin-left: 74rem;
+    margin-top: 12rem;
+   }
+   .loginerror2{
+     color: red;
+    
+     }
+     .loginerror3{
+      color:green;
+     
+      }

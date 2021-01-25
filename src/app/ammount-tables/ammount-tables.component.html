@@ -1,0 +1,85 @@
+
+<mat-toolbar >
+    <mat-label>  <img  [src]=myimg></mat-label>
+  
+  
+    <span class="example-spacer"></span>
+       <button mat-button [matMenuTriggerFor]="menu"> {{user.fullName | titlecase}}</button>
+       <mat-menu #menu="matMenu">
+         <!-- <button mat-menu-item *ngFor="let menu of sideMenus" mat-list-item [routerLink]="menu.path">   {{menu.displayname}}</button> -->
+       
+       <!-- {{user.fullName | titlecase}} -->
+         <button routerLink="/ProfileComponent" mat-menu-item>ProfileSettings</button>
+         <button routerLink="/ChangeComponent" mat-menu-item>ChangePassword</button>
+         <button  mat-menu-item (click)=" logout()">Logout</button> 
+       </mat-menu>
+  
+  </mat-toolbar>
+
+
+
+
+
+
+
+
+
+<span class="login-page">
+
+
+
+
+
+  <div class="total"><b>Total Ammount: {{x}}</b></div>
+
+<div class="container">
+
+ 
+
+    
+<div *ngFor="let ammount of ammountMap  | keyvalue" >
+
+
+
+<b>{{ammount.key  | titlecase}}</b>
+
+<table class="table table-striped" >
+
+    <tbody >
+            <tr class="bg-primary" >
+                <td class="colorr">Tag name</td>
+                <td class="colorr">Date</td>
+                <td class="colorr">Ammount</td>
+                <td class="colorr">Actions</td>
+
+            </tr>
+           
+        <tr *ngFor="let user of ammount.value">
+                <td>{{user.tagName | titlecase}}</td>
+                <td>{{user.ammountDate }}</td>
+                <td>{{user.ammount}}</td>
+                
+
+                <td *ngIf="user.total==0">
+
+    <button class="btn btn-danger" (click)="deleteTag(user.tagName)">Delete</button>
+    <button class="btn btn-secondary" (click)="editTag(ammount.key,user.tagName)">Edit</button>
+  
+     
+      
+                </td> 
+                <td *ngIf="user.total!=0"><b>Total:{{user.total}}</b></td>
+            </tr>
+
+        
+    </tbody>
+ 
+</table>
+
+</div>
+
+
+ </div>
+
+</span>
+

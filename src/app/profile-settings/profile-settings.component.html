@@ -1,0 +1,46 @@
+
+<mat-toolbar >
+  <mat-label>  <img  [src]=myimg></mat-label>
+
+
+  <span class="example-spacer"></span>
+
+     <button mat-button [matMenuTriggerFor]="menu">{{user.fullName | titlecase}}</button>
+     <mat-menu #menu="matMenu">
+      <button routerLink="/ProfileComponent" mat-menu-item>ProfileSettings</button>
+      <button routerLink="/ChangeComponent" mat-menu-item>ChangePassword</button>
+      <button routerLink="/LoginComponent" mat-menu-item>Logout</button> 
+    
+     </mat-menu>
+</mat-toolbar>
+<span class="login-page" >
+ 
+  <h1 class="example-card1">Personal Information</h1>
+
+  <mat-card  class="container" >
+
+    <div class="example-card" >
+<div><label style="color: gray;"><b>Full Name:</b></label></div><div> {{user.fullName | titlecase}}</div>
+<div><label style="color: gray;"><b>Emal address:</b></label></div><div>  {{user.email | titlecase}}</div>
+<div><label style="color: gray;"><b>Phone Number:</b></label></div><div>  {{user.phoneNumber | titlecase}}</div>
+<div><label style="color: gray;"><b>Date of Birth:</b></label></div><div>  {{user.dob | date:"dd-MM-yyyy"}}</div>
+<div><label style="color: gray;"><b>Gender:</b></label></div><div>  {{user.gender | titlecase}}</div> 
+ <!-- <div><label style="color: gray;">Adress:</label> {{user | titlecase}}</div> -->
+ <!-- <div><label style="color: gray;">Full Name:</label></div><div>Vamsi Reddy</div>
+<div><label style="color: gray;">Emal address:</label></div><div>Vamsikondapally425@gmail.com</div>
+<div><label style="color: gray;">Phone Number:</label></div><div>9603747257</div>
+<div><label style="color: gray;">Date of Birth:</label></div><div>2020-11-23T18:30:00.000+00:00</div>
+<div><label style="color: gray;">Gender:</label></div><div>Male</div>  -->
+
+<div class="editbutton">
+  <button  class="btn btn-primary" (click)="editprofile()" >Edit</button>
+</div>
+
+
+  
+
+</div>
+
+</mat-card> 
+
+</span>

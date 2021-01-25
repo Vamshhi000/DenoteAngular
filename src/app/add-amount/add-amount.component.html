@@ -1,0 +1,117 @@
+
+
+
+ <mat-toolbar >
+  <mat-label>  <img  [src]=myimg></mat-label>
+
+
+  <span class="example-spacer"></span>
+
+     <button mat-button [matMenuTriggerFor]="menu">{{user.fullName | titlecase}}</button>
+     <mat-menu #menu="matMenu">
+      <button routerLink="/ProfileComponent" mat-menu-item>ProfileSettings</button>
+      <button routerLink="/ChangeComponent" mat-menu-item>ChangePassword</button>
+      <button  mat-menu-item (click)=" logout()">Logout</button> 
+    
+     </mat-menu>
+</mat-toolbar>
+<span class="login-page" >
+ 
+  <h1 class="example-card1">{{name | titlecase}}</h1>
+
+  <mat-card  class="container" >
+    
+
+      
+   
+    <div class="example-card">
+
+
+          <form class="example-form" [formGroup]="userform">
+    
+
+
+
+            <mat-form-field class="example-full-width">
+              <input matInput 
+                     placeholder="Ammount" formControlName='ammount'>
+                     <mat-error  *ngIf="this.userform.get('ammount').errors && this.userform.get('ammount').errors.invalidNumber ">
+                      Enter a valid Ammount
+                       </mat-error>
+
+            </mat-form-field>
+
+
+            <mat-form-field class="example-chip-list"
+          >
+           <p *ngIf="offtag"><b>Select one tag for this ammount</b></p> 
+              <mat-chip-list #chipList >
+                <mat-chip
+                
+                *ngFor="let fruitttt of realFruit" 
+                  [selectable]="selectable"
+                  [removable]="removable"
+                  (removed)="removee(fruitttt)" class="colorr" >
+               
+                {{fruitttt.tagName | titlecase}}
+                
+
+            
+                  <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+   
+              </mat-chip-list>
+      
+            </mat-form-field>
+        
+
+            <mat-form-field class="example-chip-list">
+     
+              <mat-chip-list #chipList aria-label="Fruit selection">
+                <mat-chip
+                  *ngFor="let fruit of allFruits"
+                  [selectable]="selectable"
+                  [removable]="removable"
+                  (removed)="remove(fruit)" (click)="onnnnnnn(fruit)" class="colorr" >
+          
+        
+                {{fruit.tagName | titlecase}}
+          
+          
+            
+                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <a style="margin-top: 1rem;" class="colorrr" (click)="openDialog()"><b>+Create a new Tag</b></a>
+              </mat-chip-list>
+             
+            </mat-form-field>
+
+          </form>
+          <div class="save">
+          <button [disabled]="userform.invalid"  type="button" class="btn btn-primary " (click)="saveAmmount()">Save</button>
+     
+        </div>
+    
+
+</div>
+
+</mat-card> 
+
+
+
+
+    <div *ngIf='diserror' class="col-sm-4" [ngClass]="isSucuess==true ? 'loginerror':'loginerror1'">
+      <div class="alert alert-warning alert-dismissible"  >
+         
+          <strong [ngClass]="isSucuess===true ? 'loginerror3':'loginerror2'">{{message}}</strong>
+        </div>
+      </div>
+     
+</span>
+
+
+
+
+
+
+

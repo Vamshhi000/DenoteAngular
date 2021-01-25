@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["chart.js"],
             "outputPath": "dist/ednote",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -27,11 +28,12 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
-           
+            
+
             ],
             "scripts": [
-           
-
+              
+              "./node_modules/chart.js/dist/Chart.js"
             ]
           },
           "configurations": {
@@ -96,8 +98,11 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
+
             ],
-            "scripts": []
+            "scripts": [
+             
+            ]
           }
         },
         "lint": {

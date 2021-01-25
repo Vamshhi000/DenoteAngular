@@ -1,2 +1,59 @@
+<body  class="p-3 mb-2 bg-primary text-white" ><div class="bg-primary"></div> 
 
-<input type="text" value="firstname">
+
+    <mat-card class="example-card" >
+
+
+      <mat-card-header>
+        <img class="img"  [src]=myimg>
+      </mat-card-header>
+      <form class="example-form" [formGroup]="userform">
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input matInput 
+                 placeholder="Enter a valid email id" formControlName='email'>
+
+          <mat-error  *ngIf="this.userform.get('email').errors && this.userform.get('email').errors.invalidemail " >
+            Please enter a valid email address
+          </mat-error>
+          
+        </mat-form-field>
+
+
+          <mat-form-field class="example-full-width">
+          <input matInput type="password" 
+                 placeholder="password" formControlName='password'>
+  
+  
+        </mat-form-field>
+
+      </form>
+      <div style="margin-left: 7rem;margin-bottom: 1rem;">
+      <button [disabled]="userform.invalid" type="button" class="btn btn-primary" (click)="Login()">Login</button>
+      <a style="margin-left: 1rem;" routerLink="/RegisterComponent"> <b>Signup</b></a>
+    </div>
+
+    <div>
+      <a  style="margin-left: 6rem;" routerLink="/ForgotPasswordComponent"><b>Forgot Password?</b></a>
+    </div>
+  
+
+    </mat-card>
+
+    <div *ngIf='diserror' class="col-sm-4" [ngClass]="isSucuess==true ? 'loginerror':'loginerror1'">
+      <div class="alert alert-warning alert-dismissible"  >
+         
+          <strong [ngClass]="isSucuess===true ? 'loginerror3':'loginerror2'">{{message}}</strong>
+        </div>
+      </div>
+
+
+
+
+</body>
+
+
+
+
+
+

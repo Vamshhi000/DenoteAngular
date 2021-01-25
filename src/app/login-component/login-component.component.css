@@ -1,7 +1,8 @@
 .example-card {
     max-width: 400px;
-    margin-left: 36rem;
-    margin-top: 18rem;
+    margin-left: 34rem;
+    margin-top: 17rem;
+    /* text-align: center; */
 }
   
   
@@ -19,3 +20,29 @@
   .example-full-width {
     width: 100%;
   }
+
+
+ .loginerror2{
+   color: red;
+  
+   }
+   .csdmd{
+    min-width: 100%;
+    padding: 60px 1rem;
+    display: block;
+    background: #0275d8;
+ 
+}
+.img{
+ margin-left: 2rem;
+}
+.loginerror{
+   
+  margin-left: 66rem;
+  margin-top: 5rem;
+ }
+ .loginerror1{
+   
+  margin-left: 62rem;
+  margin-top: 5rem;
+ }

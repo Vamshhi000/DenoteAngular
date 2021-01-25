@@ -1,0 +1,102 @@
+
+.container {
+
+  display: flex;
+  flex-direction: row ;
+  flex-wrap:wrap ;
+  width: 50%;
+  justify-content: space-around;
+
+
+
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+
+}
+
+  .login-page {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+   /* background-color:#fff6f7;  */
+   background-color: #f5e0e2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: scroll;
+    flex-wrap:wrap ;
+  }
+  .stylle{
+ 
+    background-color:#0275d8;  
+
+  }
+  .card-img-top {
+    width: 100%;
+    height: 11vw;
+    object-fit: cover;
+    
+}
+.cardsize{
+ 
+  width: 15rem;
+  text-align: center;
+
+
+ 
+}
+.example-card1 {
+  max-width: 400px;
+  margin-left: 33rem;
+  margin-top: 16rem;
+} 
+.example-form {
+  min-width: 150px;
+  max-width: 300px;
+  width: 100%;
+}
+.sendbtn{
+  margin-top: 1rem;
+  margin-left: 9rem;
+}
+.ggkj{
+  float:left; 
+position:absolute; 
+z-index:-1;
+}
+.header{
+  width: 100%;
+  background-color: #b3dbff;
+  justify-content: left;
+  color: #0275d8;
+}
+.example-full-width {
+  width: 100%;
+}
+
+
+.dialog{
+  
+  text-align: -webkit-right;
+    margin-right: 5rem;
+    margin-top: 6rem;
+    margin-left: 38rem;
+}
+.example-card {
+  max-width: 400px;
+}
+.example-button {
+  display: block;
+  margin: 80px auto 400px;
+}
+
+.example-container {
+  height: 200px;
+  overflow: auto;
+  border: 1px solid #ccc;
+}

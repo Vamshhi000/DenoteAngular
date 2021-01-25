@@ -1,0 +1,19 @@
+<h2 class="header" >Create a new Tag</h2>
+
+<form  [formGroup]="userform">
+
+
+    
+    
+    <mat-form-field class="example-full-width">
+      <!-- <mat-label>Title*</mat-label> -->
+      <input matInput 
+            placeholder="Tag description"  formControlName='tagName'>
+
+         
+    </mat-form-field>
+    
+   
+    <div class="createe"><button (click)="save()"  type="button" class="btn btn-primary" >Create</button></div>
+  </form>
+  

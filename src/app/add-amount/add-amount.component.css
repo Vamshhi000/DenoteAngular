@@ -1,0 +1,123 @@
+.example-chip-list {
+    width: 100%;
+  }
+  .save{
+    margin-left: 8rem;
+    margin-top: 4rem;
+}
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+.vertical2 { 
+    border-left: 2px solid white; 
+    height: fit-content; 
+    position:absolute; 
+    right: 85%; 
+    margin-top: 2rem;
+}
+
+.vertical { 
+    border-left: 2px solid gray; 
+    height: fit-content; 
+    position:absolute; 
+    left: 50%; 
+    margin-top: 0rem;
+}
+.login-page {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+   /* background-color:#fff6f7;  */
+   background-color: #f5e0e2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: scroll;
+}
+.example-card {
+
+    margin-left: 4%;
+
+
+  }
+  .example-card1 {
+
+     margin-top: 1rem;
+
+    text-align: center;
+ 
+   }
+  .container {
+
+    height: 400px;
+    width: 400px;
+  margin-top: 1%;
+    display: flex;
+
+    align-items: center;
+    flex-direction: column ;
+    flex-wrap:wrap ;
+
+
+  
+  
+  }
+  .topcard{
+      width: 99%;
+      height: 8%;
+      /* margin-left: 1rem; */
+  }
+  .mat-form-field {
+    margin-right: 12px;
+  }
+  .example-form {
+    /* margin-top: 2rem; */
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+  .containerrr{
+    width: 20%;
+    display: flex;
+
+    align-items: flex-end;
+    align-content: flex-end;
+    flex-direction: row ;
+    flex-wrap:wrap ;
+  }
+  .loginerror{
+   
+    margin-left: 66rem;
+    margin-top: 9rem;
+   }
+   .loginerror1{
+     
+    margin-left: 74rem;
+    margin-top: 9rem;
+   }
+   .loginerror2{
+     color: red;
+    
+     }
+     .loginerror3{
+      color:green;
+     
+      }
+      .colorr{
+        background: #0275d8;
+      }
+
+
+      .colorrr{
+        color: #0275d8;
+      }

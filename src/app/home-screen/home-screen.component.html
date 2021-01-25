@@ -1,0 +1,59 @@
+<!--    <img  [src]=myimg> -->
+
+<mat-toolbar >
+  <mat-label>  <img  [src]=myimg></mat-label>
+
+  <button routerLink="/ammountTable" mat-button >Ammount List</button>
+  |
+  <button routerLink="/charts" mat-button >Graphs</button>
+  
+     <span class="example-spacer"></span>
+    
+     <button mat-button [matMenuTriggerFor]="menu"> {{user.fullName | titlecase}}</button>
+     <mat-menu #menu="matMenu">
+       <!-- <button mat-menu-item *ngFor="let menu of sideMenus" mat-list-item [routerLink]="menu.path">   {{menu.displayname}}</button> -->
+       <button routerLink="/ProfileComponent" mat-menu-item>ProfileSettings</button>
+       <button routerLink="/ChangeComponent" mat-menu-item>ChangePassword</button>
+       <button mat-menu-item (click)="logout()">Logout</button> 
+     </mat-menu>
+
+
+     
+ 
+</mat-toolbar>
+
+ <span class="login-page" >
+  <div class="dialog" >
+    <button  class="btn btn-primary" (click)="addCatogory()">Add Category</button>
+  </div>
+  <h1 style="margin-left: 30%;">Add your expenses by selecting the following Category</h1>
+  <div class="container">
+   
+  <div  class="card"  class="cardsize" *ngFor="let a of liist"  >
+
+  <button (click)="sendimgname(a.name)">
+    <b mat-raised-button
+    matTooltip="Add ammount"
+    matTooltipPosition="above"
+    aria-label="Button that displays a tooltip when focused or hovered over">
+    <img (click)="sendimgname(a.name)" class="card-img-top" routerLink="/addAmmount" [src]="'data:image/jpeg;base64,' + a.mainImage">
+  </b>
+
+
+  </button >
+      <!-- <b> {{a.name | titlecase}}
+      </b>-->
+      <b mat-raised-button
+      matTooltip="Edit Category"
+      matTooltipPosition="above"
+      aria-label="Button that displays a tooltip when focused or hovered over">
+    <button routerLink="/EditCategory" (click)="editimg(a.name)">{{a.name | titlecase}}</button>  
+    </b>
+    </div>
+  
+
+  </div>
+
+ </span>
+
+

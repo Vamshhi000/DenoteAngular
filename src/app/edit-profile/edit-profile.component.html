@@ -1,0 +1,118 @@
+
+
+<mat-toolbar >
+    <mat-label>  <img  [src]=myimg></mat-label>
+  
+  
+    <span class="example-spacer"></span>
+  
+       <button mat-button [matMenuTriggerFor]="menu">{{user.fullName | titlecase}}</button>
+       <mat-menu #menu="matMenu">
+        <button routerLink="/ProfileComponent" mat-menu-item>ProfileSettings</button>
+        <button routerLink="/ChangeComponent" mat-menu-item>ChangePassword</button>
+        <button mat-menu-item (click)="logout()">Logout</button> 
+      
+       </mat-menu>
+  </mat-toolbar>
+  <span class="login-page" >
+   
+    <h1 class="example-card1">Personal Information</h1>
+  
+    <mat-card  class="container" >
+  
+      <div class="example-card">
+
+
+            <form class="example-form" [formGroup]="userform">
+      
+    
+      
+      
+              <mat-form-field class="example-full-width">
+               
+                  <input matInput 
+                         placeholder="FullName" formControlName='fullName'>
+          
+                  <mat-error  *ngIf="this.userform.get('fullName').touched || this.userform.get('fullName').errors" >
+                    Name should not below 5 letters & above 30 letters 
+                  </mat-error>
+                  
+                  
+                </mat-form-field>
+      
+<label style="color: gray;">Email</label>
+    <div>
+
+<b>{{user.email | titlecase}}</b>
+                
+</div>
+
+                <mat-form-field class="example-full-width">
+                <input matInput 
+                       placeholder="PhoneNumber" formControlName='phoneNumber'>
+            
+                       <mat-error  *ngIf="this.userform.get('phoneNumber').errors && this.userform.get('phoneNumber').errors.invalidNumber ">
+                       Enter a valid phone number
+                        </mat-error>
+        
+              </mat-form-field>
+
+
+
+
+
+
+
+
+
+
+
+
+              
+<div>
+              <label style="color: gray;">Gender </label>
+            </div>
+              <mat-radio-group aria-label="Select an option" formControlName='gender'>
+                <mat-radio-button  value="Male" >Male</mat-radio-button>
+                <mat-radio-button value="Female" >Female</mat-radio-button>
+              </mat-radio-group>
+      
+
+              <mat-form-field color="accent" appearance="fill">
+            <mat-label>Date Of Birth</mat-label>
+            <input matInput [matDatepicker]="picker2" formControlName='dob'>
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2 color="primary"></mat-datepicker>
+          </mat-form-field>
+
+    
+      
+            </form>
+            <div style="margin-left: 5rem;">
+            <button [disabled]="userform.invalid" type="button" class="btn btn-primary " (click)="save()">Save</button>
+       
+          </div>
+      
+
+  </div>
+
+  </mat-card> 
+
+
+
+
+      <div *ngIf='diserror' class="col-sm-4" [ngClass]="isSucuess==true ? 'loginerror':'loginerror1'">
+        <div class="alert alert-warning alert-dismissible"  >
+           
+            <strong [ngClass]="isSucuess===true ? 'loginerror3':'loginerror2'">{{message}}</strong>
+          </div>
+        </div>
+  </span>
+  
+
+
+
+
+
+
+ 

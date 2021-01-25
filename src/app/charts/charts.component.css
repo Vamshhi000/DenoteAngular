@@ -1,0 +1,17 @@
+p {
+    font-family: Lato;
+  }
+  .sfs{
+      height: 700px;
+      width: 700px;
+  }
+  .container {
+
+    display: flex;
+    flex-direction: row ;
+
+
+  
+  
+  
+  }

@@ -1,0 +1,54 @@
+<mat-toolbar >
+  <mat-label>  <img  [src]=myimg></mat-label>
+
+
+  <span class="example-spacer"></span>
+     <button mat-button [matMenuTriggerFor]="menu"> {{user.fullName | titlecase}}</button>
+     <mat-menu #menu="matMenu">
+       <!-- <button mat-menu-item *ngFor="let menu of sideMenus" mat-list-item [routerLink]="menu.path">   {{menu.displayname}}</button> -->
+     
+     <!-- {{user.fullName | titlecase}} -->
+       <button routerLink="/ProfileComponent" mat-menu-item>ProfileSettings</button>
+       <button routerLink="/ChangeComponent" mat-menu-item>ChangePassword</button>
+       <button  mat-menu-item (click)=" logout()">Logout</button> 
+     </mat-menu>
+
+</mat-toolbar>
+
+<span class="login-page">
+  <mat-card  class="example-card1"  >
+
+
+
+
+        <h2 class="header" >Add Category</h2>
+    
+
+      <form  [formGroup]="userform">
+    
+    
+        <mat-form-field class="example-full-width">
+          <mat-label>Title*</mat-label>
+          <input matInput 
+                  formControlName='title'>
+    
+             
+        </mat-form-field>
+        <input type="file" multiple (change)="onFileChanged($event)"  />
+       
+    
+      </form>
+      <div style="text-align: center;" >
+        <button  type="button" class="btn btn-primary" (click)="onUpload()" value="upload">Upload</button>
+      
+      </div>
+  </mat-card>   
+
+    <div *ngIf='iserror' class="col-sm-2" class="loginerror">
+      <div class="alert alert-warning alert-dismissible"  >
+         
+          <strong [ngClass]="isSucuess===true ? 'loginerror3':'loginerror2'" >{{message}}</strong> .
+        </div>
+      </div>
+
+    </span>
